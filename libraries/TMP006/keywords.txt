@@ -1,0 +1,28 @@
+#######################################
+# Syntax Coloring Map TMP006
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+TMP006_t	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+init		KEYWORD2
+gettemp		KEYWORD2
+setconfig	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+TMP006_CFG_1SAMPLE	LITERAL1
+TMP006_CFG_2SAMPLE	LITERAL1
+TMP006_CFG_4SAMPLE	LITERAL1
+TMP006_CFG_8SAMPLE	LITERAL1
+TMP006_CFG_16SAMPLE	LITERAL1
+TMP006_CFG_RESET	LITERAL1
+TMP006_CFG_MODEON	LITERAL1
+TMP006_CFG_DRDYEN	LITERAL1
+TMP006_CFG_DRDY		LITERAL1

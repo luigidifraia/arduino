@@ -1,0 +1,41 @@
+#######################################
+# Syntax Coloring Map ILI9341
+#######################################
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+init			KEYWORD2
+set_orientation		KEYWORD2
+get_width		KEYWORD2
+get_height		KEYWORD2
+get_font_width		KEYWORD2
+get_font_height		KEYWORD2
+set_scroll_def		KEYWORD2
+set_scroll_start	KEYWORD2
+setmask			KEYWORD2
+rectfill		KEYWORD2
+rect			KEYWORD2
+moveto			KEYWORD2
+lineto			KEYWORD2
+line			KEYWORD2
+blt			KEYWORD2
+locate			KEYWORD2
+font_face		KEYWORD2
+font_color		KEYWORD2
+_putc			KEYWORD2
+puts			KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+C_BLACK		LITERAL1
+C_BLUE		LITERAL1
+C_RED		LITERAL1
+C_MAGENTA	LITERAL1
+C_GREEN		LITERAL1
+C_CYAN		LITERAL1
+C_YELLOW	LITERAL1
+C_WHITE		LITERAL1
+C_LGRAY		LITERAL1
+C_GRAY		LITERAL1

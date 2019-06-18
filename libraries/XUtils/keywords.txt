@@ -1,0 +1,13 @@
+#######################################
+# Syntax Coloring Map XUtils
+#######################################
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+xgetc	KEYWORD2
+xputc	KEYWORD2
+xgets	KEYWORD2
+xatoi	KEYWORD2
+xputs	KEYWORD2
+xprintf	KEYWORD2
