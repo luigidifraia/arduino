@@ -22,3 +22,6 @@ ILI9341 (Pin 16: SPI MOSI, Pin 14: SPI MISO, Pin 15: SPI SCK, Pin 7: SPI SS, Pin
 ## Reference circuit
 
 ![Reference circuit](console_bb.png)
+
+Voltage regulator (VREG): LM1117-3.3
+Level shifter (IC): 74HC4050N
