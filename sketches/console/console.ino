@@ -1,5 +1,5 @@
 /*
- * This sketch was developed on a Leonardo board and demonstrates
+ * This sketch was developed on a Pro-Micro board and demonstrates
  * the classes as per below.
  *
  * XUtils:
