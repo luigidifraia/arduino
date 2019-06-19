@@ -1,6 +1,6 @@
 # Arduino example sketch
 
-This sketch was developed on a Leonardo board and demonstrates the classes as per below.
+This sketch was developed on a Pro-Micro board and demonstrates the classes as per below.
 
 XUtils:
 - the use of `xatoi()` instead of the `Serial.parseInt()` function as the latter doesn't report parsing errors;
