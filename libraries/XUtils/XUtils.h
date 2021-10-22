@@ -30,12 +30,12 @@ class XUtils {
     virtual void xputc (char c);
     virtual char xgetc (void);
     void xputs (const __FlashStringHelper* str);
+    void xputs (const char* str);
     void xprintf (const __FlashStringHelper* fmt, ...);
     static byte xatoi (const char **str, long *res);
     byte xgets (char* buff, int len);
 
   private:
-    void xputs (const char* str);
     void xvprintf (const __FlashStringHelper* fmt, va_list arp);
 };
 
