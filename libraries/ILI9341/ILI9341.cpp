@@ -99,8 +99,8 @@
 
 #define CMD_WRB(c)  { DC_LOW(); SPI.transfer(c); DC_HIGH(); } /* Write a command to the OLED */
 #define DATA_WRB(d) { SPI.transfer(d); }  /* Write a byte to the OLED */
-#define DATA_WRW(d) { SPI.transfer(d>>8); SPI.transfer(d); }  /* Write a word to the OLED */
-#define DATA_WPX(d) { SPI.transfer(d>>8); SPI.transfer(d); }  /* Write a pixel to the OLED */
+#define DATA_WRW(d) { SPI.transfer((d)>>8); SPI.transfer(d); }  /* Write a word to the OLED */
+#define DATA_WPX(d) { SPI.transfer((d)>>8); SPI.transfer(d); }  /* Write a pixel to the OLED */
 
 void ILI9341::setrect (
   int left,       /* Left end (0..DISP_XS-1) */
