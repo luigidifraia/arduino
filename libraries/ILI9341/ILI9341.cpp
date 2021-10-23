@@ -97,10 +97,10 @@
 #define ILI9341_CMD_DIGITAL_GAMMA_CONTROL_2         0xE3
 #define ILI9341_CMD_INTERFACE_CONTROL               0xF6
 
-#define CMD_WRB(c)  { DC_LOW(); SPI.transfer(c); DC_HIGH(); } /* Write a command to the OLED */
-#define DATA_WRB(d) { SPI.transfer(d); }  /* Write a byte to the OLED */
-#define DATA_WRW(d) { SPI.transfer((d)>>8); SPI.transfer(d); }  /* Write a word to the OLED */
-#define DATA_WPX(d) { SPI.transfer((d)>>8); SPI.transfer(d); }  /* Write a pixel to the OLED */
+#define CMD_WRB(c)  { DC_LOW(); SPI.transfer(c); DC_HIGH(); } /* Write a command to the display */
+#define DATA_WRB(d) { SPI.transfer(d); }  /* Write a byte to the display */
+#define DATA_WRW(d) { SPI.transfer((d)>>8); SPI.transfer(d); }  /* Write a word to the display */
+#define DATA_WPX(d) { SPI.transfer((d)>>8); SPI.transfer(d); }  /* Write a pixel to the display */
 
 void ILI9341::setrect (
   int left,       /* Left end (0..DISP_XS-1) */
