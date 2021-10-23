@@ -1,7 +1,7 @@
 #ifndef ILI9341_h
 #define ILI9341_h
 
-#include <stdint.h>
+#include <inttypes.h>
 
 #include "Fonts.h"
 #include "XUtils.h"
@@ -28,6 +28,10 @@ class ILI9341: public XUtils {
   public:
     /**
      * Constructor
+     *
+     * @param cs Slave select pin
+     * @param reset Reset pin
+     * @param dc Data/command pin
      */
     ILI9341 (byte cs, byte reset, byte dc): _cs(cs), _reset(reset), _dc(dc) { };
 
@@ -41,7 +45,7 @@ class ILI9341: public XUtils {
      *
      * Mask and cursor settings are reset after an orientation change
      *
-     * @param orientation Orientation
+     * @param o Orientation
      */
     void set_orientation (uint8_t o);
 
