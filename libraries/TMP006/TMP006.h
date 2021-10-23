@@ -1,7 +1,9 @@
 #ifndef TMP006_h
 #define TMP006_h
 
-/* 250 ms per sample; e.g. it takes 4 seconds to average 16 samples */
+#include <inttypes.h>
+
+/* The TMP006's sampling rate is 250 ms per sample, so it takes 4 seconds to average 16 samples (TMP006_CFG_16SAMPLE) */
 
 #define TMP006_CFG_1SAMPLE  0x0000
 #define TMP006_CFG_2SAMPLE  0x0200
