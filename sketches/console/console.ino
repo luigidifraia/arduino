@@ -224,7 +224,9 @@ void parse_and_execute_command (
 #endif
       "[Misc Commands]\n"
       " c <value> - Convert numeric input to decimal\n"
+#if USE_DS3231
       " t [<year> <month> <mday> <hour> <min> <sec>] - Set/Show current time\n"
+#endif
 #if USE_TMP006
       " m - Show object temperature\n"
 #endif
