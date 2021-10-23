@@ -1,6 +1,8 @@
 #ifndef RTC_h
 #define RTC_h
 
+#include <inttypes.h>
+
 #define DS1307_I2C_ADDRESS 0x68
 #define DS3231_I2C_ADDRESS 0x68
 
