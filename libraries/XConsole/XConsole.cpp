@@ -17,7 +17,7 @@ char XConsole::xgetc (void) {
       return (char) _serial.read();
     } else {
 #if CAN_DETECT_SERIAL_DISCONNECT
-      /* Make sense if disconnection can be detected */
+      /* Makes sense if disconnection can be detected */
       if (!_serial.dtr())
         return 0;
 #endif
@@ -42,7 +42,7 @@ void XConsole::xputc (
       return;
     } else {
 #if CAN_DETECT_SERIAL_DISCONNECT
-      /* Make sense if disconnection can be detected */
+      /* Makes sense if disconnection can be detected */
       if (!_serial.dtr())
         return;
 #endif
