@@ -352,6 +352,10 @@ void ILI9341::lineto (
 
   xd = x - LocX; xr = (int32_t) LocX << 16; LocX = x;
   yd = y - LocY; yr = (int32_t) LocY << 16; LocY = y;
+  if (!xd || !yd) {
+    rectfill(x - xd, x, y - yd, y, col);
+    return;
+  }
   if ((xd < 0 ? 0 - xd : xd) >= (yd < 0 ? 0 - yd : yd)) {
     ctr = (xd < 0 ? 0 - xd : xd) + 1;
     yd = (yd << 16) / (xd < 0 ? 0 - xd : xd);
