@@ -343,7 +343,7 @@ void ILI9341::moveto (
 void ILI9341::lineto (
   int x,      /* X position for the line to (-32768..32767) */
   int y,      /* Y position for the line to (-32768..32767) */
-  uint16_t col    /* Line color */
+  uint16_t color    /* Line color */
 )
 {
   int32_t xr, yr, xp, yp, xd, yd;
@@ -353,7 +353,7 @@ void ILI9341::lineto (
   xd = x - LocX; xr = (int32_t) LocX << 16; LocX = x;
   yd = y - LocY; yr = (int32_t) LocY << 16; LocY = y;
   if (!xd || !yd) {
-    rectfill(x - xd, x, y - yd, y, col);
+    rectfill(x - xd, x, y - yd, y, color);
     return;
   }
   if ((xd < 0 ? 0 - xd : xd) >= (yd < 0 ? 0 - yd : yd)) {
@@ -378,7 +378,7 @@ void ILI9341::lineto (
       CMD_WRB(ILI9341_CMD_PAGE_ADDRESS_SET);  /* Set V position */
       DATA_WRW(yp); DATA_WRW(yp);
       CMD_WRB(ILI9341_CMD_MEMORY_WRITE);  /* Write a pixel data */
-      DATA_WPX(col);
+      DATA_WPX(color);
     }
     xr += xd; yr += yd;
   } while (--ctr);
@@ -391,11 +391,11 @@ void ILI9341::line (
   int y1,     /* Start position Y for the line (-32768..32767) */
   int x2,     /* End position X for the line (-32768..32767) */
   int y2,     /* End position Y for the line (-32768..32767) */
-  uint16_t col    /* Line color */
+  uint16_t color    /* Line color */
 )
 {
   moveto(x1, y1);
-  lineto(x2, y2, col);
+  lineto(x2, y2, color);
 }
 
 void ILI9341::blt (
@@ -488,7 +488,7 @@ void ILI9341::_putc (
   const uint8_t *fnt;;
   uint8_t b, d;
   uint16_t dchr;
-  uint32_t col;
+  uint32_t color;
   int h, wc, w, wb, i, fofs;
 
 
@@ -535,10 +535,10 @@ void ILI9341::_putc (
         b = 0x80;
         d = pgm_read_byte(&fnt[i++]);
       }
-      col = ChrColor;
-      if (!(b & d)) col >>= 16;   /* Select color, BG or FG */
+      color = ChrColor;
+      if (!(b & d)) color >>= 16;   /* Select color, BG or FG */
       b >>= 1;        /* Next bit */
-      DATA_WPX(col);  /* Put the color */
+      DATA_WPX(color);  /* Put the color */
     } while (--wc);
     fnt += wb;      /* Next raster */
   } while (--h);
